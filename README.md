@@ -11,7 +11,6 @@ A native Android application for tracking infant and toddler health, built with 
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Firebase Setup](#firebase-setup)
 - [Database Schema](#database-schema)
 - [Known Issues and Fixes Applied](#known-issues-and-fixes-applied)
 - [Build Variants](#build-variants)
@@ -107,7 +106,6 @@ Data Layer (Room DAOs / Firebase / DataStore)
 | Animations | Lottie Compose |
 | Background Tasks | WorkManager (Hilt-integrated) |
 | Preferences | DataStore Preferences |
-| Remote / Auth | Firebase Auth, Firestore, Storage, Messaging, Crashlytics, Analytics |
 | Build System | Gradle with Kotlin DSL, Version Catalog |
 
 ---
@@ -190,20 +188,6 @@ alias(libs.plugins.firebase.crashlytics)
 ### Run
 
 Select a device or emulator with API level 24 or above and press **Run**. The app will launch to the splash screen and route to onboarding or the dashboard depending on whether setup has been completed.
-
----
-
-## Firebase Setup
-
-1. Create a project at [console.firebase.google.com](https://console.firebase.google.com).
-2. Register an Android app with the package name `com.example.shishu_sneh_healthcare`.
-3. Download `google-services.json` and place it in the `app/` directory.
-4. Enable **Email/Password** authentication in the Firebase console.
-5. Create a **Firestore** database in production mode and configure security rules as appropriate.
-6. Enable **Firebase Storage** if photo attachments are required.
-7. Uncomment the plugin aliases in `app/build.gradle.kts` as noted above.
-
----
 
 ## Database Schema
 
